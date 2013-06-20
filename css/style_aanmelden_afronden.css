@@ -1,0 +1,77 @@
+html, body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	height:100%;
+	width:100%;
+	background: url(../images/back_main.jpg);
+	background-repeat:repeat-x;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size:11px;
+	line-height:15px;
+}
+
+A {text-decoration: none; font-weight: none;}
+A:link {
+	font-weight:bold;
+	TEXT-DECORATION: none;
+	color: #ff9200;
+}
+A:visited {color: #ff9200}
+A:hover {
+	TEXT-DECORATION: underline;
+	font-weight: bold;
+	font-style: normal;
+}
+
+#main {
+	position: relative;
+	top:40px;
+	height:450px;
+	width:400px;
+	margin-left: auto;
+	margin-right: auto;
+	background: url(../images/popup.png) no-repeat;
+	padding:20px;
+}
+
+#main_inhoud {
+	width:365px;
+}
+
+a.lees_verder{
+	position: absolute;
+	right: 10px;
+	font-weight:bold;
+	TEXT-DECORATION: none;
+	color: #ff9200;
+}
+
+a.lees_verder:hover{
+	TEXT-DECORATION: underline !important;
+	color: #ff9200;
+}
+
+
+label {
+	font-weight: bold;
+}
+
+label.error {
+	color: red;
+	line-height:14px;
+	font-size: 0.8em;
+}
+
+.navigation_button {
+	width : 70px;
+	position: relative;
+	top:10px;
+	right:0px;
+}
+#demoNavigation {
+	margin-top : 0.5em;
+	margin-right : 1em;
+	text-align: left;
+}

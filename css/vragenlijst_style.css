@@ -1,0 +1,139 @@
+html, body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	height:100%;
+	width:100%;
+	background: url(../images/back_main.jpg);
+	background-repeat:repeat-x;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size:11px;
+	line-height:16px;
+}
+
+#main {
+	position: relative;
+	top:60px;
+	height:600px;
+	width:1000px;
+	margin-left: auto;
+	margin-right: auto;
+	background: url(../images/table_top.png) no-repeat;
+	padding: 20px 10px 20px 10px;
+}
+
+#fieldWrapper {
+}
+
+#demoNavigation {
+	margin-top : 0.5em;
+	margin-right : 1em;
+	text-align: right;
+}
+
+#data {
+	font-size : 0.7em;
+}
+
+input {
+	margin-right: 0.1em;
+	margin-bottom: 0.5em;
+}
+
+.input_field_25em {
+	width: 2.5em;
+}
+
+.input_field_3em {
+	width: 3em;
+}
+
+.input_field_35em {
+	width: 3.5em;
+}
+
+.input_field_12em {
+	width: 12em;
+}
+
+label {
+	margin-bottom: 0.2em;
+	font-weight: bold;
+}
+
+label.error {
+	color: red;
+	font-size: 0.8em;
+	margin-left : 0.5em;
+}
+
+.step span {
+	float: right;
+	font-weight: bold;
+	padding-right: 0.8em;
+}
+
+.navigation_button {
+	width : 70px;
+	position: relative;
+	top:10px;
+	right:10px;
+}
+
+.status {
+	position: absolute;
+	top:10px;
+	left:10px;
+}
+
+
+#data {
+		overflow : auto;
+}
+
+.titel {
+	position: relative;
+	top:0px;
+	right:10px;
+	font-size:20px;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	padding: 6px 5px;
+	border-bottom: 1px solid #95bce2;
+	vertical-align: top;
+}
+
+td * {
+	padding: 0px;
+}
+
+td.rapport_error {
+	border: 1px solid white !important;
+}
+
+tr.alt td {
+	background: #ecf6fc;
+}
+
+tr.over td, tr:hover td {
+	background: #bcd4ec;
+}
+
+td.rapport_error {
+	border: 0px !important;
+	background: white;
+}
+.logo {
+	position: absolute;
+	top:-55px;
+	left:60px;
+	z-index: 999999;
+//	color:white;
+//	font-size:20px !important;
+}

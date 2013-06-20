@@ -1,0 +1,168 @@
+<?
+//BEVEILIGING
+include("../include/login.php");
+
+//parameter voor stijl
+$tab_act = "tab_beh";
+if (!($a)) { $a = "v"; }
+
+if ($a == "a") { //Adressenlijsten
+	$menu_item_act = "beh_adressen"; 
+}
+if ($a == "v") { //Vragen beheer
+	$menu_item_act = "beh_vragen"; 
+}
+
+//Includeer de uiteindelijke style
+include ("../beheer_style/style.php");
+?>
+
+<!-- MAIN -->
+<?
+print "<div class=\"main\">\n";
+
+
+//Adressenlijsten
+if ($a == "a") { 
+?>
+<B>Adressenlijsten</B><br><br>
+
+<?
+}
+
+
+//Vragen
+if ($a == "v") { 
+?>
+<B>Vragen</B><br>
+
+<script type="text/javascript">
+// only for demo purposes
+$.validator.setDefaults({
+	submitHandler: function() {
+		 form.submit(); 
+	}
+});
+//$.validator.messages.max = jQuery.format("Your totals musn't exceed {0}!");
+
+$.validator.addMethod("vraag", function(value, element) {
+	return !this.optional(element) && !this.optional($(element).parent().prev().children("select")[0]);
+}, "Beide velden zijn verplicht");
+
+$().ready(function() {
+	$("#orderform").validate({
+		errorPlacement: function(error, element) {
+			error.appendTo( element.parent().next() );
+		},
+		highlight: function(element, errorClass) {
+			$(element).addClass(errorClass).parent().prev().children("select").addClass(errorClass);
+		}
+	});
+	
+	var template = jQuery.format($("#template").val());
+	function addRow() {
+		$(template(i++)).appendTo("#vragen tbody");
+	}
+	
+	var i = 1;
+	// start with one row
+	addRow();
+	// add more rows on click
+	$("#add").click(addRow);
+	
+	// check keyup on quantity inputs to update totals field
+	$("#orderform").delegate("keyup", "input.vraag", function(event) {
+		var totals = 0;
+		$("#vragen input.vraag").each(function() {
+			totals += +this.value;
+		});
+		$("#totals").attr("value", totals).valid();
+	});
+	
+});
+</script>
+
+<style type="text/css">
+form.cmxform { width: 75em; }
+em.error {
+  padding-left: 16px;
+}
+em.success {
+
+  padding-left: 16px;
+}
+
+form.cmxform label.error {
+	margin-left: auto;
+	width: 250px;
+}
+form.cmxform input.submit {
+	margin-left: 10;
+}
+em.error { color: black; }
+#warning { display: none; }
+select.error {
+	border: 1px dotted red;
+}
+#add {
+	position: relative;
+	left:10px;
+}
+</style>
+
+<textarea style="display:none" id="template">
+	<tr>
+		<td>
+			<label>Vraag {0}</label>
+		</td>
+		<td class="">
+			<select name="item-type-{0}">
+				<option value="">Selecteer soort...</option>
+				<option value="janee">Ja/nee</option>
+				<option value="open">Open</option>
+				<option value="rapport10">Rapport</option>
+			</select>
+		</td>
+		<td class='vraag'>
+			<input size='60' class="vraag" id="item-vraag-{0}" name="item-vraag-{0}" />
+		</td>
+		<td class='vraag-error'></td>
+	</tr>
+</textarea>
+
+<form id="orderform" class="cmxform" method="get" action="../include/opslaan_vragen.php">
+	<fieldset>
+		<table id="vragen" border="0" cellspacing="0" cellpadding="5">
+			<tbody>
+				
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="2">&nbsp;</td>
+					<td align="right"><input class="submit" type="submit" value="Opslaan"/></td>
+				</tr>
+			</tfoot>
+		</table>
+	</fieldset>
+</form>
+<br><button name="add" id="add">Voeg nog een vraag toe</button>
+
+
+<?
+}
+
+
+
+print "</div>\n";
+?>
+
+
+<!-- MENU -->
+<div class="menu">
+	<a class="menu_item" id="beh_vragen" href="?a=v">Vragen</a>
+</div>
+
+
+<?
+include ("../beheer_style/style_bottom.php");
+?>
