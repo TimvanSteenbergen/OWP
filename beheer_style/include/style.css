@@ -1,0 +1,258 @@
+html, body {
+	margin:0;
+	padding:0;
+	height:100%;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size:11px;
+	line-height:15px;
+}
+A {text-decoration: none; font-weight: none;}
+A:link {color: black}
+A:visited {color: black}
+A:hover {
+	TEXT-DECORATION: underline;
+	font-weight: normal;
+	font-style: normal;
+}
+
+#container {
+	min-height:100%;
+	min-width:100%;
+	position:absolute;
+}
+#header {
+	background:	url(../images/back_top.jpg);
+	padding:0px;
+	height:100px;
+	width:100%;
+
+}
+#body {
+	padding:0px;
+	padding-bottom:50px;	
+	z-index:1;
+	width:100%;
+}
+#footer {
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:50px;			
+	background-image:url(../images/back_bottom.jpg);
+}
+#menu_back {
+	position:fixed;
+	width:150px;
+	min-height:100%;
+	z-index:-1000;
+	background-image:url(../images/back_menu.jpg);
+}
+.knop {
+	background-color:#4E5152;
+	color: #FFF;
+	font-weight: bold;	
+	cursor: pointer;
+}
+.menu {
+	background-image:url(../images/back_menu.jpg);
+	vertical-align:top;
+}
+.main {
+	padding-left:10px;
+	padding-top:10px;
+	background-color:white;
+}
+.logo {
+	position: absolute;
+	top:5px;
+	left:50px;
+	z-index: 999999;
+}
+.top_logout {
+	position: absolute;
+	top:10px;
+	right:15px;
+	color: #FFF;
+	text-align: right;
+}
+
+.labels {
+    width: 200px;
+	vertical-align: central;
+	float: left;	
+	font-weight: bold !important;
+}
+
+.tussenregel {
+    height: 15px;	
+}
+label.error {
+	color: red;
+	line-height:14px;
+	font-size: 0.8em;
+}
+
+.white_link {
+	color:#FFF !important;
+}
+.orange_link {
+	color:#FF9200 !important;
+}
+
+.copyright {
+	position:absolute;
+	bottom:15px;
+	right:15px;
+	color:white;
+}
+
+.contact_wijziging {
+	position:absolute;
+	bottom:15px;
+	left:170px;
+}
+.menu_item {
+	position:relative;
+	display: block;
+	left:0px;
+	top:20px;
+	height:20px;
+	width:139px;
+	background-color:#f3f3f3;
+	padding-left:10px;
+	padding-top:7px;
+	padding-bottom:2px;
+	border-top-style:solid;
+	border-top-color:#b7b7b7;
+	border-top-width:1px;	
+	border-right-style:solid;
+	border-right-color:#959595;
+	border-right-width:1px;	
+	border-bottom-style:solid;
+	border-bottom-color:#b7b7b7;
+	border-bottom-width:1px;
+	cursor: pointer;
+}
+A.menu_item:hover { background-color:#e1e1e1;  TEXT-DECORATION: none !important; }
+
+.menu_item_act {
+	position:relative;
+	display: block;
+	left:0px;
+	top:20px;
+	height:20px;
+	width:139px;
+	padding-left:10px;
+	padding-top:7px;
+	padding-bottom:2px;
+	border-top-style:solid;
+	border-top-color:#b7b7b7;
+	border-top-width:1px;	
+	border-right-style:solid;
+	border-right-color:#959595;
+	border-right-width:1px;	
+	border-bottom-style:solid;
+	border-bottom-color:#b7b7b7;
+	border-bottom-width:1px;
+	cursor: pointer;
+	background-color:#adcde5;
+	color:black;
+	font-weight:bold;
+}
+A.menu_item_act:hover { background-color:#adcde5;  TEXT-DECORATION: none !important; font-weight:bold; }
+
+
+.tabs_all {
+	position:absolute;
+	left:175px;
+	top:74px;
+}
+
+.tab {
+	width:140px;
+	padding: 3px 0px 0px 0px;
+	height:20px;
+	font-size:13px;
+	letter-spacing:1px;
+	font-weight:bold;
+	color:#033e6b;
+	display: block;
+	text-align:center;
+	background: url(../images/tabs.png) no-repeat 0px -35px;
+	cursor: pointer;
+}
+A.tab:hover { background-position:0px -70px; TEXT-DECORATION: none !important; font-weight: bold !important; }
+
+.tab_act {
+	width:140px;
+	padding: 3px 0px 0px 0px;
+	height:20px;
+	font-size:13px;
+	letter-spacing:1px;
+	font-weight:bold;
+	color:#033e6b;
+	display: block;
+	text-align:center;
+	background: url(../images/tabs.png) no-repeat 0px 0px;
+	cursor: pointer;
+}
+A.tab_act:hover { TEXT-DECORATION: none !important; font-weight: bold !important; }
+
+.uploadifyQueueItem {
+	background-color: #F5F5F5;
+	border: 2px solid #E5E5E5;
+	font: 11px Verdana, Geneva, sans-serif;
+	margin-top: 5px;
+	padding: 10px;
+	width: 350px;
+}
+.uploadifyError {
+	background-color: #FDE5DD !important;
+	border: 2px solid #FBCBBC !important;
+}
+.uploadifyQueueItem .cancel {
+	float: right;
+}
+.uploadifyQueue .completed {
+	background-color: #E5E5E5;
+}
+.uploadifyProgress {
+	background-color: #E5E5E5;
+	margin-top: 10px;
+	width: 100%;
+}
+.uploadifyProgressBar {
+	background-color: #0099FF;
+	height: 3px;
+	width: 1px;
+}
+.titel_main {
+	font-size: 1em;
+	font-weight: bold;
+
+}
+#project_aanvr_but {
+	position:absolute;
+	top: 550px;
+	left: 550px;
+}
+select.error {
+	border: 1px solid red;
+}
+input.error {
+	border: 1px solid red;
+}
+textarea.error {
+	border: 1px solid red;
+}
+select,input,textarea, button {
+	border: 1px solid #abadb3;
+}
+
+input.navigation_button {
+	cursor: pointer;
+}
+.submit{
+	background-color:#ff9200;
+	font-weight:bold;
+}

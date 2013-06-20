@@ -1,0 +1,229 @@
+html {overflow-y: scroll;}
+html, body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	height:100%;
+	width:100%;
+	background: url(../images/back_main.jpg);
+	background-repeat:repeat-x;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size:11px;
+	line-height:15px;
+}
+
+A {text-decoration: none; font-weight: none;}
+A:link {
+	font-weight:bold;
+	TEXT-DECORATION: none;
+	color: #ff9200;
+}
+A:visited {color: #ff9200}
+A:hover {
+	TEXT-DECORATION: underline;
+	font-weight: bold;
+	font-style: normal;
+}
+
+.logo {
+	position: absolute;
+	top:-55px;
+	left:60px;
+	z-index: 999999;
+//	color:white;
+//	font-size:20px !important;
+}
+
+.main {
+	position: relative;
+	top:60px;
+	height:600px;
+	width:1000px;
+	margin-left: auto;
+	margin-right: auto;
+	background: url(../images/table_top.png) no-repeat;
+}
+
+.login {
+	position: absolute;
+	top:10px;
+	right:24px;
+	width:50px;
+	font-weight:bold;
+	cursor:pointer;
+	text-align: center;
+	color:black !important;
+}
+A.login:hover { TEXT-DECORATION: underline !important; font-weight: bold !important; }
+
+.registreer {
+	position: absolute;
+	top:10px;
+	right:80px;
+	width:80px;
+	font-weight:bold;
+	cursor:pointer;
+	text-align: center;
+	color:black !important;
+}
+A.registreer:hover { TEXT-DECORATION: underline !important; font-weight: bold !important; }
+
+.contact {
+	position: absolute;
+	top:10px;
+	right:175px;
+	width:50px;
+	font-weight:bold;
+	cursor:pointer;
+	text-align: center;
+	color:black !important;
+}
+A.contact:hover { TEXT-DECORATION: underline !important; font-weight: bold !important; }
+
+.login_form {
+	position: absolute;
+	padding: 10px 10px 10px 10px;
+	top:50px;
+	right:25px;
+	width:200px;
+	height:125px;
+//	background: url(../images/back_login_form.png) no-repeat;
+	background-color:white;
+	font-weight:none;
+	color:black;
+}
+
+a.lees_verder{
+	position: absolute;
+	right: 10px;
+	font-weight:bold;
+	TEXT-DECORATION: none;
+	color: #ff9200;
+}
+
+a.lees_verder:hover{
+	TEXT-DECORATION: underline !important;
+	color: #ff9200;
+}
+
+.infobox {
+	position: absolute;
+	padding: 10px 10px 10px 10px;
+	width:275px;
+	font-weight:none;
+	color:black;
+	top:55px;
+	height:400px;
+}
+.infobox1 {
+	left:30px;
+	padding-top: 210px;
+	background: url(../images/thema_links.png) no-repeat;
+}
+.infobox2 {
+	left:352px;
+	padding-top: 210px;
+	background: url(../images/thema_midden.png) no-repeat;
+}
+.infobox3 {
+	right:30px;
+	padding-top: 210px;
+	background: url(../images/thema_rechts.png) no-repeat;
+}
+
+.infobox_klein {
+	position: absolute;
+	height:100px;
+	width:168px;
+	top:495px;
+//	background: url(../images/table_klein_onder.png) no-repeat;
+}
+
+.infobox4 {
+	left:30px;
+	background: url(../images/table_klein_onder_1.png) no-repeat !important ;
+}
+.infobox5 {
+	left:223px;
+	background: url(../images/table_klein_onder_2.png) no-repeat !important ;
+}
+.infobox6 {
+	left:416px;
+	background: url(../images/table_klein_onder_3.png) no-repeat !important ;
+}
+.infobox7 {
+	left:609px;
+	background: url(../images/table_klein_onder_4.png) no-repeat !important ;
+}
+.infobox8 {
+	left:802px;
+	background: url(../images/table_klein_onder_5.png) no-repeat !important ;
+}
+.promo_tekst {
+	position: relative;
+	padding-right:10px;
+	padding-left:5px;
+	padding-top:20px;
+	height:65px;
+	text-align:center;
+	color: #033e6b;
+	font-weight:bold;
+	font-size: 1.4em;
+	font-style: italic;
+	line-height: 1.2em;
+}
+.promo_tekst_van {
+	position: relative;
+	width:100%;
+	height:20px;
+	top: 0px;
+	text-align:center;
+	color: #ff9200;
+	font-size: 9px;
+	font-weight:bold;
+}
+.brin_tekst {
+	font-size: 0.8em;
+	line-height:14px;
+	color: #9b9b9b;
+}
+label {
+	font-weight: bold;
+}
+
+label.error {
+	color: red;
+	line-height:14px;
+	font-size: 0.8em;
+}
+
+.navigation_button {
+	width : 70px;
+	position: relative;
+	top:10px;
+	right:0px;
+}
+#demoNavigation {
+	margin-top : 0.5em;
+	margin-right : 1em;
+	text-align: right;
+}
+.messagebox{
+	position:absolute;
+	width:100px;
+	margin-left:10px;
+	padding-top:8px;
+}
+.messageboxok{
+	position:absolute;
+	width:auto;
+	margin-left:10px;
+}
+.messageboxerror{
+	position:absolute;
+	width:auto;
+	margin-left:10px;
+	font-weight:bold;
+	color:red;
+}

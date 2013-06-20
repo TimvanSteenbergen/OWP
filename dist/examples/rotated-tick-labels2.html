@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	
+	<title>Voorbeeld resultaten</title>
+
+    <link class="include" rel="stylesheet" type="text/css" href="../jquery.jqplot.min.css" />
+  <!--[if lt IE 9]><script language="javascript" type="text/javascript" src="../excanvas.js"></script><![endif]-->
+    <script class="include" type="text/javascript" src="../jquery.min.js"></script>
+    
+   
+</head>
+<body>
+
+      
+<!-- Example scripts go here -->
+
+<div id="chart1" style="height:200px; width:500px;"></div><br><br>
+<div id="chart2" style="height:300px; width:500px;"></div>
+  
+<script type="text/javascript">
+$(document).ready(function(){
+  var line1 = [['1', 7],['2', 2],['3', 14],['4', 19],['5', 3],['6', 10],['7', 5], ['8', 15]];
+
+  var plot1 = $.jqplot('chart1', [line1], {
+    title: 'Ik vul deze vragenlijst in voor mijn kind in groep...',
+    series:[{renderer:$.jqplot.BarRenderer}],
+    axesDefaults: {
+        tickRenderer: $.jqplot.CanvasAxisTickRenderer ,
+        tickOptions: {
+          angle: -0
+        }
+    },
+    axes: {
+      xaxis: {
+        renderer: $.jqplot.CategoryAxisRenderer
+      }
+    }
+  });
+
+  plot2 = jQuery.jqplot('chart2', 
+    [[['Beantwoord', 88], ['Nog te antwoorden', 22]]], 
+    {
+      title: 'Response percentage', 
+      seriesDefaults: {
+        shadow: false, 
+        renderer: jQuery.jqplot.PieRenderer, 
+        rendererOptions: { 
+          startAngle: 180, 
+          sliceMargin: 4, 
+          showDataLabels: true } 
+      }, 
+      legend: { show:true, location: 'w' }
+    }
+  );
+});
+</script>
+
+
+<!-- End example scripts -->
+
+<!-- Don't touch this! -->
+
+
+    <script class="include" type="text/javascript" src="../jquery.jqplot.min.js"></script>
+<!-- End Don't touch this! -->
+
+<!-- Additional plugins go here -->
+
+  <script class="include" language="javascript" type="text/javascript" src="../plugins/jqplot.canvasTextRenderer.min.js"></script>
+  <script class="include" language="javascript" type="text/javascript" src="../plugins/jqplot.canvasAxisTickRenderer.js"></script>
+  <script class="include" language="javascript" type="text/javascript" src="../plugins/jqplot.categoryAxisRenderer.min.js"></script>
+  <script class="include" language="javascript" type="text/javascript" src="../plugins/jqplot.barRenderer.js"></script>
+  <script class="include" type="text/javascript" src="../plugins/jqplot.pieRenderer.min.js"></script>
+
+<!-- End additional plugins -->
+
+</body>
+
+
+</html>
