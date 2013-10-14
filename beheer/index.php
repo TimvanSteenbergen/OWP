@@ -1,12 +1,11 @@
 <?
 //BEVEILIGING
 include("../include/login.php");
-
+//
 //parameter voor stijl
 $tab_act = "tab_beh";
 //
 if (!($a)) { $a = "v"; }
-
 if ($a == "v") { //Vragen beheer
 	$menu_item_act = "beh_vragen"; 
 }
